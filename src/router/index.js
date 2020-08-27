@@ -46,10 +46,10 @@ router.beforeEach((to, from, next) => {
   if (requireAuth) {
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        console.log('user exist:' + to.name)
+        console.trace('user exist:' + to.name)
         next()
       } else {
-        console.log('user no exist:' + to.name)
+        console.trace('user no exist:' + to.name)
         next({
           path: '/signin',
           query: { redirect: to.fullPath }
@@ -57,7 +57,7 @@ router.beforeEach((to, from, next) => {
       }
     })
   } else {
-    console.log('requiresAuth no need:' + to.name)
+    console.debug('requiresAuth no need:' + to.name)
     next()
   }
 })

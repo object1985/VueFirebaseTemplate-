@@ -1,6 +1,6 @@
 <template>
   <div class="signup">
-    <h2>Sign up</h2>
+    <h2>Sign up 新規登録</h2>
     <input type="text" placeholder="Username" v-model="username" />
     <input type="text" placeholder="password" v-model="password" />
     <button @click="signUp">Register</button>
