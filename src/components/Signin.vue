@@ -4,16 +4,14 @@
       <p>{{ errorMessage }}</p>
     </div>
     <h2>Sign in</h2>
-    <input type="text" placeholder="Username" v-model="username" />
-    <input type="text" placeholder="password" v-model="password" />
-    <button @click="signIn">Signin</button>
+    <v-text-field label="Username" v-model="username" />
+    <v-text-field label="password" v-model="password" />
+    <v-btn @click="signIn">Signin</v-btn>
     <hr />
-    <div class="mt-2">
-      <button block variant="primary" @click="googleLogin">Google ログイン</button>
-    </div>
+    <v-btn @click="googleLogin">Google ログイン</v-btn>
     <p>
       You don't have an acctoun?
-      <router-link to="/register">create account</router-link>
+      <router-link to="/register">Register account</router-link>
     </p>
   </div>
 </template>

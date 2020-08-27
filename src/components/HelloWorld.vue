@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <h1>Hello {{name}}</h1>
-    <button @click="signOut">Sign out</button>
+    <v-btn @click="signOut">Sign out</v-btn>
   </div>
 </template>
 

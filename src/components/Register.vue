@@ -1,9 +1,9 @@
 <template>
   <div class="register">
     <h2>Register 新規登録</h2>
-    <input type="text" placeholder="Username" v-model="username" />
-    <input type="text" placeholder="password" v-model="password" />
-    <button @click="register">Register</button>
+    <v-text-field label="Username" v-model="username" />
+    <v-text-field label="password" v-model="password" />
+    <v-btn @click="register">Register</v-btn>
     <p>
       Do you have an account?
       <router-link to="/signin">sign in</router-link>
@@ -28,7 +28,7 @@ export default {
         .auth()
         .createUserWithEmailAndPassword(this.username, this.password)
         .then((user) => {
-          alert("Create account: ", user.email);
+          alert("Register account: ", user.email);
         })
         .catch((error) => {
           alert(error.message);
