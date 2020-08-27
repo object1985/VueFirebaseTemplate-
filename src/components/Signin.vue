@@ -13,7 +13,7 @@
     </div>
     <p>
       You don't have an acctoun?
-      <router-link to="/signup">create account</router-link>
+      <router-link to="/register">create account</router-link>
     </p>
   </div>
 </template>

@@ -1,9 +1,9 @@
 <template>
-  <div class="signup">
-    <h2>Sign up 新規登録</h2>
+  <div class="register">
+    <h2>Register 新規登録</h2>
     <input type="text" placeholder="Username" v-model="username" />
     <input type="text" placeholder="password" v-model="password" />
-    <button @click="signUp">Register</button>
+    <button @click="register">Register</button>
     <p>
       Do you have an account?
       <router-link to="/signin">sign in</router-link>
@@ -15,7 +15,7 @@
 import firebase from "firebase";
 
 export default {
-  name: "Signup",
+  name: "register",
   data() {
     return {
       username: "",
@@ -23,7 +23,7 @@ export default {
     };
   },
   methods: {
-    signUp: function () {
+    register: function () {
       firebase
         .auth()
         .createUserWithEmailAndPassword(this.username, this.password)
@@ -54,7 +54,7 @@ li {
 a {
   color: #42b983;
 }
-.signup {
+.register {
   margin-top: 20px;
 
   display: flex;

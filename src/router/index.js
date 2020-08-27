@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Signup from '../components/Signup.vue'
+import register from '../components/Register.vue'
 import Signin from '../components/Signin.vue'
 import firebase from 'firebase'
 
@@ -24,9 +24,9 @@ const routes = [
     meta: { requiresAuth: true }
   },
   {
-    path: '/signup',
-    name: 'Signup',
-    component: Signup
+    path: '/register',
+    name: 'register',
+    component: register
   },
   {
     path: '/signin',
